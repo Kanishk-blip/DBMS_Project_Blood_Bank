@@ -18,7 +18,7 @@ export default function BBManagerPage() {
     <div className="bg-blue-50 min-h-screen p-6">
       <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-lg p-6">
         <h1 className="text-3xl font-bold text-blue-800 mb-8 pb-2 border-b-4 border-blue-700">
-          Recording Staff Page
+          BB Manager Page
         </h1>
 
         <div className="rounded-lg shadow-md overflow-hidden">
