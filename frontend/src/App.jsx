@@ -7,8 +7,21 @@ import DonorInsights from './donorpage'
 import BloodGroupStatistics from './BloodGroup'
 import LandingDashboard from './dashboard'
 import CityWiseStatistics from './City-Wise-Statistics-Page'
-import ManagerInsights from './Manager-insights-page'
+import ManagerInsights from './ManagerInsights'
 import BloodBankOverview from './BloodBankOverview'
+//import CityBloodStatistics from './City'
+import BloodDonorPage from "./BloodDonorPage";
+
+import StaffMember from './Staff_Member'
+import HospitalInfoPage from './HospitalInfoPage'
+import BloodSpecimenPage from './BloodSpecimentPage'
+import DiseaseFinderPage from './DiseaseFinderPage'
+import RecordingStaffPage from './RecordingStaffPage'
+import BBManagerPage from './BBManagerPage'
+import RecipientPhonePage from './RecipientPhonesPage'
+import RecipientPage from './RecipientPage'
+import DonorPhonePage from './DonorPhonesPage'
+import CityPage from './CityPage'
 function App() {
   const [count, setCount] = useState(0)
 

@@ -176,6 +176,7 @@ export default function ManagerInsights() {
   const [topManagers, setTopManagers] = useState([]);
   const [managerRequests, setManagerRequests] = useState(null);
   const [selectedManager, setSelectedManager] = useState("Meena Kapoor");
+  
 
   const managerMapping = {
     "Meena Kapoor": 201,

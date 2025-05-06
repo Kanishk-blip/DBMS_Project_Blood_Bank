@@ -1974,6 +1974,19 @@ import DonorPage from './donorpage';
 import BloodBankOverview from './BloodBankOverview';
 import CityWiseStatisticsPage from './City-Wise-Statistics-Page';
 import BloodGroup from './BloodGroup';
+import ManagerInsights from './ManagerInsights';
+import Staff_Member from './Staff_Member';
+import BloodDonorPage from "./BloodDonorPage";
+import HospitalInfoPage from './HospitalInfoPage';
+import BloodSpecimenPage from './BloodSpecimentPage';
+import DiseaseFinderPage from './DiseaseFinderPage';
+import RecordingStaffPage from './RecordingStaffPage';
+import BBManagerPage from './BBManagerPage';
+import RecipientPhonePage from './RecipientPhonesPage';
+import RecipientPage from './RecipientPage';
+import DonorPhonePage from './DonorPhonesPage';
+import CityPage from './CityPage';
+
 
 export default function LandingDashboard() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -2042,9 +2055,24 @@ export default function LandingDashboard() {
     { id: 'donor-insights', title: 'Donor Insights', description: 'Analytics and statistics about blood donors', color: 'indigo', icon: '📊' },
     { id: 'blood-bank-overview', title: 'Blood Bank Overview', description: 'Detailed blood balance data', color: 'red', icon: '🩸' },
     { id: 'city-wise-stats', title: 'City Wise Statistics', description: 'Breakdown by cities', color: 'teal', icon: '🏙️' },
-    { id: 'blood-group', title: 'Blood Group', description: 'Group-wise donors and usage', color: 'blue', icon: '🧬' }
+    { id: 'blood-group', title: 'Blood Group', description: 'Group-wise donors and usage', color: 'blue', icon: '🧬' },
+    { id: 'manager-insights', title: 'Manager Insights', description: 'Manager performance and statistics', color: 'emerald', icon: '🧑‍💼' },
+    { id: 'staff-member', title: 'Staff Members', description: 'Details about staff personnel', color: 'yellow', icon: '👨‍⚕️' },
+    { id: 'blood-donor', title: 'Blood Donor', description: 'List of registered blood donors', color: 'rose', icon: '🧑‍🦰' },
+  
+    // New Pages
+    { id: 'hospital-info', title: 'Hospitals', description: 'Hospital information and stats', color: 'lime', icon: '🏥' },
+    { id: 'blood-specimen', title: 'Blood Specimens', description: 'Manage specimen data', color: 'orange', icon: '🧪' },
+    { id: 'disease-finder', title: 'Disease Finder', description: 'Search disease-related data', color: 'purple', icon: '🦠' },
+    { id: 'recording-staff', title: 'Recording Staff', description: 'Manage recording staff', color: 'cyan', icon: '📝' },
+    { id: 'bb-manager', title: 'BB Manager', description: 'Blood bank manager data', color: 'pink', icon: '📋' },
+    { id: 'recipient-phones', title: 'Recipient Phones', description: 'Phone records of recipients', color: 'fuchsia', icon: '📱' },
+    { id: 'recipients', title: 'Recipients', description: 'Recipient data and info', color: 'amber', icon: '🧍‍♂️' },
+    { id: 'donor-phones', title: 'Donor Phones', description: 'Phone numbers of donors', color: 'sky', icon: '📞' },
+    { id: 'cities', title: 'Cities', description: 'City-related data', color: 'neutral', icon: '🌆' },
   ];
-
+  
+  
   const renderActivePage = () => {
     switch (activePage) {
       case 'donor-insights':
@@ -2055,10 +2083,38 @@ export default function LandingDashboard() {
         return <CityWiseStatisticsPage />;
       case 'blood-group':
         return <BloodGroup />;
+      case 'manager-insights':
+        return <ManagerInsights />;
+      case 'staff-member':
+        return <Staff_Member />;
+      case 'blood-donor':
+        return <BloodDonorPage />;
+      
+      // New Pages
+      case 'hospital-info':
+        return <HospitalInfoPage />;
+      case 'blood-specimen':
+        return <BloodSpecimenPage />;
+      case 'disease-finder':
+        return <DiseaseFinderPage />;
+      case 'recording-staff':
+        return <RecordingStaffPage />;
+      case 'bb-manager':
+        return <BBManagerPage />;
+      case 'recipient-phones':
+        return <RecipientPhonePage />;
+      case 'recipients':
+        return <RecipientPage />;
+      case 'donor-phones':
+        return <DonorPhonePage />;
+      case 'cities':
+        return <CityPage />;
+      
       default:
         return null;
     }
   };
+  
 
   return (
     <div className="min-h-screen p-6 relative">

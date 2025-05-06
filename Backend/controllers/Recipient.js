@@ -1,18 +1,16 @@
 const getConnection = require('../db.js');
 const oracledb = require('oracledb');
-const getAvgBloodQuantityByManager = async (req, res) => {
+const Recipient = async (req, res) => {
     try {
       const connection = await getConnection();
   
       const result = await connection.execute(
-        `SELECT bm.m_Name, AVG(r.reci_Bqnty) AS avg_requested
-       FROM SYSTEM.requests_to rt
-       JOIN SYSTEM.BB_Manager bm ON rt.M_id = bm.M_id
-       JOIN SYSTEM.Recipient r ON r.reci_ID = rt.reci_ID
-       GROUP BY bm.m_Name`,
+       'SELECT * FROM SYSTEM.Recipient'
+,
         [],
         { outFormat: oracledb.OUT_FORMAT_OBJECT }
       );
+  
       console.log("Rows:", result.rows);
   
       await connection.close();
@@ -22,4 +20,4 @@ const getAvgBloodQuantityByManager = async (req, res) => {
       res.status(500).json({ error: 'Internal server error' });
     }
   };
-  module.exports = { getAvgBloodQuantityByManager };
+  module.exports = { Recipient };
