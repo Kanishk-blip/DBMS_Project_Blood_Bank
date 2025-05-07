@@ -155,7 +155,7 @@
 
 import { useState, useEffect } from 'react';
 
-export default function BloodBankOverview() {
+export default function BloodCampOverview() {
   const [bloodGroupBalance, setBloodGroupBalance] = useState([]);
   const [topManagers, setTopManagers] = useState([]);
   const [topHospitals, setTopHospitals] = useState([]);
@@ -199,7 +199,7 @@ export default function BloodBankOverview() {
   return (
     <div className="bg-gradient-to-br from-red-50 via-white to-red-100 min-h-screen py-10 px-4 sm:px-8">
       <div className="max-w-6xl mx-auto space-y-10">
-        <h1 className="text-4xl font-extrabold text-red-700 mb-4 border-b-4 border-red-500 inline-block pb-2">Blood Bank Overview</h1>
+        <h1 className="text-4xl font-extrabold text-red-700 mb-4 border-b-4 border-red-500 inline-block pb-2">Blood Camp Overview</h1>
 
         {/* Panel 1: Blood Group Balance */}
         <div className="bg-white shadow-xl rounded-2xl p-6 border border-red-200 hover:shadow-2xl transition duration-300">
