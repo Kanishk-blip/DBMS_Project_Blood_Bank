@@ -104,11 +104,11 @@ DELIMITER ;
 👥 Contributors
 This project was developed by:
 
+Kanishk Kumar Agarwal - 102313046
+
 Harshhit Gupta - 102303896
 
 Manik Sharma - 102303887
-
-Kanishk Kumar Agarwal - 102313046
 
 🚀 Conclusion
 This project successfully demonstrates how a well-designed database can significantly improve the efficiency and effectiveness of blood donation initiatives. It serves as a critical tool for managing life-saving operations and promotes a more organized, data-driven approach to public health
