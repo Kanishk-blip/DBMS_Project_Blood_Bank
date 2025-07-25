@@ -42,6 +42,13 @@ gives_order_to_blood_bank: A linking table between Hospital_Info and BC_Manager.
 
 requests_to: A linking table between Recipient and BC_Manager.
 
+
+Dashboard ->
+<img width="1630" height="798" alt="Screenshot 2025-05-06 161921" src="https://github.com/user-attachments/assets/483d7563-c8be-4338-9758-2bcbc8b91c35" />
+Donor Dashboard->
+<img width="853" height="780" alt="Screenshot 2025-05-05 231153" src="https://github.com/user-attachments/assets/cd58454b-3242-48f8-84e3-52dfa951efce" />
+
+
 ✨ Features
 Donor and Recipient Management: Efficiently register and manage records for both blood donors and recipients.
 
@@ -65,6 +72,8 @@ Find the average blood quantity requested for each blood group:
 SELECT reci_Bgrp, AVG(reci_Bqnty) AS avg_quantity
 FROM Recipient
 GROUP BY reci_Bgrp;
+<img width="1181" height="666" alt="image" src="https://github.com/user-attachments/assets/1fe483bb-ee94-41f5-a83d-2f5d0ccef198" />
+
 
 List donors who live in cities with more than one hospital:
 SELECT bd.bd_name, c.City_Name
@@ -75,6 +84,8 @@ WHERE bd.City_Pin IN (
     GROUP BY City_Pin
     HAVING COUNT(*) > 1
 );
+<img width="1041" height="215" alt="image" src="https://github.com/user-attachments/assets/fa447d43-f81f-4ee0-829c-203415b503fa" />
+
 
 Stored Procedure to get donors by city:
 DELIMITER $$
@@ -100,6 +111,7 @@ BEGIN
     RETURN total;
 END$$
 DELIMITER ;
+<img width="897" height="794" alt="image" src="https://github.com/user-attachments/assets/bb71f19f-04c4-48e3-9dff-d9ea7e99992c" />
 
 👥 Contributors
 This project was developed by:
